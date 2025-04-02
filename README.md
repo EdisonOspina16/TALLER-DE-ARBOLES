@@ -52,3 +52,7 @@ Implementar recorrido inorden para reconstruir la expresión en notación infija
 
 ((3 + 4) * 2) / 7
 (Opcional) Permitir convertir expresiones en notación infija a árbol directamente.
+
+-------------------
+##### La estructura del arbol de busqueda binaria se encuentra en el archivo DataStruct-Classes.
+##### La solucion a los ejercicios se encuentran en DataStruct-Exercises.
