@@ -2,7 +2,7 @@ from DataStruct.Classes.BinaryTree import BinarySearchTree, Node
 import json
 
 
-def diagnostico(nodo):
+def diagnostico_medico(nodo):
     if "diagnostico" in nodo:
         print(f"Diagnóstico: {nodo['diagnostico']}")
         return nodo['diagnostico']
@@ -10,12 +10,12 @@ def diagnostico(nodo):
     respuesta = input(f"{nodo['pregunta']} (si/no): ").strip().lower()
 
     if respuesta == "si":
-        return diagnostico(nodo["si"])
+        return diagnostico_medico(nodo["si"])
     elif respuesta == "no":
-        return diagnostico(nodo["no"])
+        return diagnostico_medico(nodo["no"])
     else:
         print("Por favor, responde con 'si' o 'no'.")
-        return diagnostico(nodo)
+        return diagnostico_medico(nodo)
 
 
 def recorrido_postorden(nodo):
@@ -37,5 +37,4 @@ with open("arbol_diagnostico_medico.json", "r", encoding="utf-8") as file:
 
 
 print("Bienvenido al sistema de diagnóstico médico.")
-diagnostico(arbol)
-
+diagnostico_medico(arbol)
